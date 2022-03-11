@@ -8,8 +8,10 @@ Prendere il testo e suddividerlo in tanti paragrafi ogni volta in cui si incontr
     $array_frasi = explode(".", $text);
 
     $gruppo_frasi_singole = "";
-    for($i=0; $i<count($array_frasi)-1; $i++){
-        $gruppo_frasi_singole .= ($i+1). ") ". $array_frasi[$i]. "<br>";
+    for($i=0; $i<count($array_frasi); $i++){
+        if($array_frasi[$i] != ""){
+            $gruppo_frasi_singole .= ($i+1). ") ". $array_frasi[$i]. "<br>";
+        }
     }
     
 ?>
